@@ -18,3 +18,5 @@ VatanBetaV3.0
    Chapter 5:Osman Pamukoğlu
    
 seçeneklerinden birini seçin ve aldığınız kararlara göre ülkenin geleceğini belirleyin... İyi Oyunlar!
+
+Exe dosyasını tek tıkla indirin:https://www.mediafire.com/file/v6hhxo2u7h9vk9r/VatanBetaV3.0.exe/file
