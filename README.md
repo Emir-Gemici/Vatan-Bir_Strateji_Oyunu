@@ -19,9 +19,9 @@ VatanBetaV3.0
    
 seçeneklerinden birini seçin ve aldığınız kararlara göre ülkenin geleceğini belirleyin... İyi Oyunlar!
 
-Exe dosyasını tek tıkla indirin : https://www.mediafire.com/file/v6hhxo2u7h9vk9r/VatanBetaV3.0.exe/file
+Exe dosyasını tek tıkla indirin : https://www.mediafire.com/file/54cd915cuzh6uo3/VatanBetaV3.0.exe/file
 
-Jar dosyasını tek tıkla indirin : https://www.mediafire.com/file/r5czzymq00y34mp/Vatan.jar/file
+Jar dosyasını tek tıkla indirin : https://www.mediafire.com/file/m75dyh2nkevqtrk/Vatan.jar/file
 
 Eğer jar dosyasını indirecekseniz yanında bat dosyasını indirip aynı klasöre koyup bat dosyasını çalıştırın.
 
