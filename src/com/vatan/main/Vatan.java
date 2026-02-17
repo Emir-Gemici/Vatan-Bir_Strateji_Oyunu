@@ -26,91 +26,18 @@ public class Vatan {
             System.out.println(
                     "Hangi Chapter'ı oynamak istersiniz?\n" +
                             "Chapter 1 için 1'e Chapter 2 için 2'ye Chapter 3 için 3'e Chapter 4 için 4'e Chapter 5 için 5'e basın.");
+            MuzikKutusu startMusic = new MuzikKutusu();
+            startMusic.oynat("secim.mp3",6);
             Scanner input = new Scanner(System.in);
             int chapterSecimi = input.nextInt();
-            if (chapterSecimi == 5) {
-                try {
-                    MuzikKutusu.herseyiSustur();
-                    IndikatorlerCh5 yeniOyuncu = new IndikatorlerCh5();
-                    ArrayList<Olay> Chapter5 = new ArrayList<>();
-                    HileKonsolu hileKonsolu = new HileKonsolu();
-                    Random ihtimalimsi = new Random();
-                    MuzikKutusu sarki = new MuzikKutusu();
-                    Chapter5.add(new Chapter5_01());
-                    Chapter5.add(new Chapter5_02());
-                    Chapter5.add(new Chapter5_03());
-                    Chapter5.add(new Chapter5_04());
-                    Chapter5.add(new Chapter5_05());
-                    Chapter5.add(new Chapter5_06());
-                    Chapter5.add(new Chapter5_07());
-                    Chapter5.add(new Chapter5_08());
-                    Chapter5.add(new Chapter5_09());
-                    Chapter5.add(new Chapter5_10());
-                    Chapter5.add(new Chapter5_11());
-                    Chapter5.add(new Chapter5_12());
-                    Chapter5.add(new Chapter5_13());
-                    Chapter5.add(new Chapter5_14());
-                    Chapter5.add(new Chapter5_15());
-                    Chapter5.add(new Chapter5_16());
-                    Chapter5.add(new Chapter5_17());
-                    Chapter5.add(new Chapter5StatHesapla());
-                    sarki.oynat("music5.mp3", -12.0f);
-                    input.nextLine();
-                    Chapter5_01.baslangic(yeniOyuncu);
-                    for (int i = 0; i < Chapter5.size(); i++) {
-                        yeniOyuncu.chapter5DurumYazdir();
-                        System.out.println("Sıradaki soru için Enter'a basın");
-                        String giris = input.nextLine();
-                        if (giris.equals("Osman")) {
-                            int yeniIndex = hileKonsolu.ch5HileEkrani(yeniOyuncu, i);
-                            if (yeniIndex != i) {
-                                i = yeniIndex - 1;
-                                continue;
-                            }
-                        }
-                        Chapter5.get(i).oynat(yeniOyuncu);
-                        int ihtimal = ihtimalimsi.nextInt(3);
-                        if (ihtimal == 1) {
-                            if (yeniOyuncu.getPkkGucu() != 3) {
-                                int rasgaleEventIndex = ihtimalimsi.nextInt(Chapter5Events.Events.length);
-                                Chapter5Events yeniEvent = new Chapter5Events(rasgaleEventIndex);
-                                yeniEvent.oynat(yeniOyuncu, rasgaleEventIndex);
-                            }
-                        }
-                    }
-                    yeniOyuncu.chapter5DurumYazdir();
-                    System.out.println(
-                            "---------------------------------------------\n" +
-                            "Bitiş ekranını görebilmek için Enter'a basın"
-                    );
-                    input.nextLine();
-                    BitisEkrani Hakkari = new BitisEkrani();
-                    Hakkari.Chapter5Bitis();
-                } catch (Exception e) {
-                    MuzikKutusu.herseyiSustur();
-                    System.out.println(RenkliYazici.KIRMIZI + "\nBir hata ile karşılaşıldı Enter'a basılınca program kapanacak  :   " + e.getMessage() + RenkliYazici.RESET);
-                    BitisEkrani emegiGecenler = new BitisEkrani();
-                    emegiGecenler.EmegiGecenlerBitis();
-                } finally {
-                    Scanner bitisIcinEnter = new Scanner(System.in);
-                    if (bitisIcinEnter.hasNextLine()) bitisIcinEnter.nextLine();
-                }
-                System.out.println(
-                        "Tekrar oynamak ister yada diğer Chapter'ları oynamak isterseniz enter'a basın.\n" +
-                                "Eğer oynamak istemiyorsanız oyun hakkında yorumunuzu yazıp enter'a basın ve emeği geçenler ekranını görün...");
-                Scanner yenidenBaslama = new Scanner(System.in);
-                enterGel = yenidenBaslama.nextLine();
-                if (enterGel.equals("")) enterGel = "yeniden";
-                else enterGel = "yok";
-            }
             if (chapterSecimi == 3) {
                 try {
                     MuzikKutusu.herseyiSustur();
                     IndikatorlerCh3 yeniOyuncu = new IndikatorlerCh3();
                     ArrayList<Olay> Chapter3 = new ArrayList<>();
                     HileKonsolu hileKonsolu = new HileKonsolu();
-                    Random ihtimalimsi = new Random();
                     MuzikKutusu sarki = new MuzikKutusu();
+                    Random ihtimalimsi = new Random();
                     Chapter3.add(new Chapter3_01());
                     Chapter3.add(new Chapter3_02());
                     Chapter3.add(new Chapter3_03());
@@ -261,6 +188,81 @@ public class Vatan {
                     emegiGecenler.EmegiGecenlerBitis();
                 } finally {
                     MuzikKutusu.herseyiSustur();
+                    Scanner bitisIcinEnter = new Scanner(System.in);
+                    if (bitisIcinEnter.hasNextLine()) bitisIcinEnter.nextLine();
+                }
+                System.out.println(
+                        "Tekrar oynamak ister yada diğer Chapter'ları oynamak isterseniz enter'a basın.\n" +
+                                "Eğer oynamak istemiyorsanız oyun hakkında yorumunuzu yazıp enter'a basın ve emeği geçenler ekranını görün...");
+                Scanner yenidenBaslama = new Scanner(System.in);
+                enterGel = yenidenBaslama.nextLine();
+                if (enterGel.equals("")) enterGel = "yeniden";
+                else enterGel = "yok";
+            }
+            if (chapterSecimi == 5) {
+                try {
+                    MuzikKutusu.herseyiSustur();
+                    IndikatorlerCh5 yeniOyuncu = new IndikatorlerCh5();
+                    ArrayList<Olay> Chapter5 = new ArrayList<>();
+                    HileKonsolu hileKonsolu = new HileKonsolu();
+                    Random ihtimalimsi = new Random();
+                    MuzikKutusu sarki = new MuzikKutusu();
+                    Chapter5.add(new Chapter5_01());
+                    Chapter5.add(new Chapter5_02());
+                    Chapter5.add(new Chapter5_03());
+                    Chapter5.add(new Chapter5_04());
+                    Chapter5.add(new Chapter5_05());
+                    Chapter5.add(new Chapter5_06());
+                    Chapter5.add(new Chapter5_07());
+                    Chapter5.add(new Chapter5_08());
+                    Chapter5.add(new Chapter5_09());
+                    Chapter5.add(new Chapter5_10());
+                    Chapter5.add(new Chapter5_11());
+                    Chapter5.add(new Chapter5_12());
+                    Chapter5.add(new Chapter5_13());
+                    Chapter5.add(new Chapter5_14());
+                    Chapter5.add(new Chapter5_15());
+                    Chapter5.add(new Chapter5_16());
+                    Chapter5.add(new Chapter5_17());
+                    Chapter5.add(new Chapter5StatHesapla());
+                    sarki.oynat("music5.mp3", -12.0f);
+                    input.nextLine();
+                    Chapter5_01.baslangic(yeniOyuncu);
+                    for (int i = 0; i < Chapter5.size(); i++) {
+                        yeniOyuncu.chapter5DurumYazdir();
+                        System.out.println("Sıradaki soru için Enter'a basın");
+                        String giris = input.nextLine();
+                        if (giris.equals("Osman")) {
+                            int yeniIndex = hileKonsolu.ch5HileEkrani(yeniOyuncu, i);
+                            if (yeniIndex != i) {
+                                i = yeniIndex - 1;
+                                continue;
+                            }
+                        }
+                        Chapter5.get(i).oynat(yeniOyuncu);
+                        int ihtimal = ihtimalimsi.nextInt(3);
+                        if (ihtimal == 1) {
+                            if (yeniOyuncu.getPkkGucu() != 3) {
+                                int rasgaleEventIndex = ihtimalimsi.nextInt(Chapter5Events.Events.length);
+                                Chapter5Events yeniEvent = new Chapter5Events(rasgaleEventIndex);
+                                yeniEvent.oynat(yeniOyuncu, rasgaleEventIndex);
+                            }
+                        }
+                    }
+                    yeniOyuncu.chapter5DurumYazdir();
+                    System.out.println(
+                            "---------------------------------------------\n" +
+                            "Bitiş ekranını görebilmek için Enter'a basın"
+                    );
+                    input.nextLine();
+                    BitisEkrani Hakkari = new BitisEkrani();
+                    Hakkari.Chapter5Bitis();
+                } catch (Exception e) {
+                    MuzikKutusu.herseyiSustur();
+                    System.out.println(RenkliYazici.KIRMIZI + "\nBir hata ile karşılaşıldı Enter'a basılınca program kapanacak  :   " + e.getMessage() + RenkliYazici.RESET);
+                    BitisEkrani emegiGecenler = new BitisEkrani();
+                    emegiGecenler.EmegiGecenlerBitis();
+                } finally {
                     Scanner bitisIcinEnter = new Scanner(System.in);
                     if (bitisIcinEnter.hasNextLine()) bitisIcinEnter.nextLine();
                 }
